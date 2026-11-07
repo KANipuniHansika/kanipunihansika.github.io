@@ -995,3 +995,263 @@ nav a[aria-current="page"] {
   font-size: 0.75rem;
   font-weight: 400;
 }
+
+.publication-citation {
+  margin-top: 16px;
+}
+
+.publication-citation summary {
+  color: var(--rose);
+  font-size: 0.85rem;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.publication-citation p {
+  margin-top: 12px;
+  padding: 16px 18px;
+  border-left: 3px solid var(--rose);
+  border-radius: 0 8px 8px 0;
+  background: var(--feature);
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.75;
+  overflow-wrap: anywhere;
+}
+
+.publication-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  margin-top: 16px;
+  font-size: 0.9rem;
+  font-weight: 650;
+}
+
+/* Graduation photo thumbnails */
+.graduation-photos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.graduation-photos a {
+  display: block;
+  width: 180px;
+  max-width: 100%;
+  overflow: hidden;
+  border: 1px solid var(--rule);
+  border-radius: 12px;
+  background: var(--feature);
+}
+
+.graduation-photos img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 180ms ease;
+}
+
+.graduation-photos a:hover img {
+  transform: scale(1.04);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .graduation-photos img {
+    transition: none;
+  }
+
+  .graduation-photos a:hover img {
+    transform: none;
+  }
+}
+
+/* Small outline navigation icons */
+.main-nav {
+  align-items: center;
+  gap: 6px;
+}
+
+.main-nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 10px;
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    background-color 160ms ease,
+    color 160ms ease;
+}
+
+.main-nav svg {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.main-nav a:hover,
+.main-nav a[aria-current="page"] {
+  background: var(--feature);
+  color: var(--rose);
+  text-decoration: none;
+}
+
+/* Refined Hansi wordmark */
+.hansi-brand {
+  position: relative;
+  gap: 7px;
+  padding: 4px 0 8px;
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+/* Reset the older circular badge styling. */
+.hansi-brand .hansi-wordmark {
+  display: inline-block;
+  width: auto;
+  height: auto;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--rose);
+  font: inherit;
+  letter-spacing: -0.05em;
+}
+
+.hansi-brand::after {
+  content: "";
+  position: absolute;
+  left: 1px;
+  bottom: 3px;
+  width: 58px;
+  height: 5px;
+  border-bottom: 2px solid var(--rose);
+  border-radius: 50%;
+  opacity: 0.35;
+  transform: rotate(-5deg);
+}
+
+.hansi-brand .brand-spark {
+  align-self: flex-start;
+  margin-top: 3px;
+  color: var(--plum);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 650px) {
+  .main-nav {
+    gap: 4px;
+  }
+
+  .main-nav a {
+    padding: 7px 9px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .main-nav a {
+    transition: none;
+  }
+}
+
+/* CONTACT PAGE */
+.contact-intro {
+  max-width: 800px;
+  margin: auto;
+  padding: 76px 0 64px;
+}
+
+.contact-intro > .label {
+  color: var(--rose);
+}
+
+.contact-intro h1 {
+  margin: 18px 0 24px;
+  font-size: clamp(2.6rem, 6vw, 4.5rem);
+  line-height: 1.12;
+  letter-spacing: -0.055em;
+}
+
+.contact-intro h1 span {
+  color: var(--rose);
+}
+
+.contact-lead {
+  max-width: 52ch;
+  color: var(--muted);
+  font-size: 1.1rem;
+  line-height: 1.85;
+}
+
+.contact-topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 24px 0 30px;
+}
+
+.contact-hello {
+  border-radius: 999px;
+  padding: 12px 24px;
+}
+
+.contact-email {
+  margin-top: 14px;
+  font-size: 0.95rem;
+  overflow-wrap: anywhere;
+}
+
+.contact-affiliation {
+  margin-top: 44px;
+  padding: 26px;
+  border: 1px solid var(--rule);
+  border-radius: 16px;
+  background: var(--feature);
+}
+
+.contact-affiliation h2 {
+  margin: 10px 0;
+  font-size: 1.7rem;
+  letter-spacing: -0.035em;
+}
+
+.contact-affiliation > p:last-child {
+  color: var(--muted);
+}
+
+.contact-signoff {
+  margin-top: 30px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.contact-signoff span {
+  margin-left: 5px;
+  color: var(--rose);
+}
+
+@media (max-width: 650px) {
+  .contact-intro {
+    padding: 44px 0;
+  }
+
+  .contact-affiliation {
+    padding: 20px;
+  }
+}
