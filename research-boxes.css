@@ -1,0 +1,17 @@
+/* Boxed overview and linked project pages; current theme is preserved. */
+.research-overview .heading h1 { font-size: clamp(2.7rem,6vw,4.8rem); letter-spacing: -.055em; }
+.research-overview .feature,.research-overview .card { border-radius: 12px; scroll-margin-top: 24px; }
+.research-overview .card { display: flex; flex-direction: column; align-items: flex-start; }
+.research-overview .card h3 { font-size: clamp(1.55rem,2.5vw,2rem); line-height: 1.2; }
+.project-title-link { text-decoration: none; color: inherit; }
+.project-title-link:hover { color: var(--rose); text-decoration: underline; }
+.explore-project { display: inline-flex; align-items: center; min-height: 44px; margin-top: 20px; font-size: .9rem; font-weight: 700; }
+.research-overview .card .explore-project { margin-top: auto; padding-top: 20px; }
+.project-detail { padding-top: 28px; }
+.back-projects { display: inline-flex; align-items: center; min-height: 44px; font-size: .9rem; }
+.project-detail > .research-project { margin-top: 16px; border-top: 0; padding-top: 20px; }
+.project-detail .research-project h1 { font-size: clamp(2.4rem,5vw,3.8rem); line-height: 1.15; margin: 14px 0; letter-spacing: -.05em; overflow-wrap: anywhere; }
+.project-detail .research-project h2 { font: 700 1.1rem/1.4 system-ui,sans-serif; letter-spacing: normal; margin: 22px 0 12px; }
+.project-detail .project-note h2 { font: 400 1.6rem/1.2 var(--serif); }
+.project-detail .sutd-stage h2 { font-size: 1.25rem; }
+@media(max-width:650px) { .research-overview .heading { grid-template-columns: 1fr; } }
