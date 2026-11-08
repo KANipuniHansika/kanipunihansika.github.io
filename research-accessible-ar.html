@@ -8,7 +8,8 @@
   <link href="styles.css" rel="stylesheet"/>
 <link href="research.css" rel="stylesheet"/>
 <link href="research-boxes.css" rel="stylesheet"/>
- </head>
+ <link href="ar-project.css" rel="stylesheet">
+</head>
  <body>
   <a class="skip" href="#main">
    Skip to content
@@ -83,18 +84,44 @@
     </nav>
    </div>
   </header>
-  <main class="wrap research-page project-detail" id="main"><a class="back-projects" href="research.html#accessible-ar">← All research projects</a><article class="research-project" id="accessible-ar" aria-labelledby="ar-title">
-<header><p class="label">02 / Accessibility &amp; extended reality · Nov 2022 – Jul 2023</p>
-<h1 id="ar-title">Accessible AR navigation &amp; annotation</h1>
-<p class="project-affiliation">Singapore Management University · Research Engineer</p></header>
-<p class="project-overview">An AR-based indoor navigation and annotation system supporting accessible interaction for people with visual impairments, developed within the project <em>Improving Fairness and Accessibility of Crowd Work</em>.</p>
-<div class="project-columns"><section><h2>My contribution</h2><ul>
-<li>Developed an indoor localisation tool using 3D point-cloud data to represent complex indoor environments.</li>
-<li>Built interactive prototypes for Nreal Light AR glasses using Unity and C#.</li>
-<li>Explored speech, text, hand tracking, and spatial pointers for multimodal interaction.</li>
-<li>Conducted a user study and contributed to interface prototyping and user-centred development.</li>
-</ul></section><aside class="project-note"><p class="label">Prototype demonstrations</p><h2>From Unity to AR glasses</h2><p>Interaction recordings from my Unity and Nreal Light prototype work.</p><a href="https://smu-my.sharepoint.com/:f:/g/personal/nipunih_ka_2024_msc_smu_edu_sg/IgDU1oamwQX9ToQ_4A0pFto8AT13sBobwKli-doUSc2NznE?e=cSbCug" target="_blank" rel="noopener noreferrer">View demo folder ↗</a></aside></div>
-<div class="tags"><span class="tag">Accessible interaction</span><span class="tag">Unity / C#</span><span class="tag">Nreal Light</span><span class="tag">3D point clouds</span><span class="tag">Figma</span></div></article><p class="research-endnote"><a href="research.html">← Back to selected work</a> · <a href="contact.html">Get in touch →</a></p></main>
+  <main class="wrap research-page project-detail ar-page" id="main"><a class="back-projects" href="research.html#accessible-ar">← All research projects</a>
+<article class="research-project" id="accessible-ar" aria-labelledby="ar-title">
+    <header>
+        <p class="label">Accessibility &amp; extended reality · Singapore Management University · 2022–2023</p>
+        <h1 id="ar-title">Making indoor spaces<br><em>interactive in AR.</em></h1>
+        <p class="project-subtitle">Point-cloud annotation and object selection with Nreal Light</p>
+        <p class="project-overview">Within my broader research on accessible indoor interaction, I developed Unity C# prototypes for Nreal Light AR glasses. The materials shown here focus on representing indoor spaces as point clouds and letting users identify, select, and manipulate spatial regions.</p>
+        <div class="project-links">
+            <a class="button" href="https://smu-my.sharepoint.com/:f:/g/personal/nipunih_ka_2024_msc_smu_edu_sg/IgB-_42CihI5R5d0cEKNsxTNAdp1TD6OCAXPkVkUcLfrKjk?e=tZNgS5" 
+            
+            target="_blank" rel="noopener noreferrer">
+            View Unity &amp; AR demo videos ↗</a>
+            <a href="#ar-process">Explore the interaction design ↓</a>
+        </div>
+    </header>
+<div class="ar-gallery"><figure class="ar-figure"><a href="images/research/ar/room.jpeg" target="_blank" rel="noopener noreferrer" aria-label="Enlarge: Photograph of the meeting room used in the prototype (opens in a new tab)"><img src="images/research/ar/room.jpeg" alt="Photograph of the meeting room used in the prototype" loading="lazy"></a><figcaption>Physical environment: a meeting room with a table, chairs, and surrounding objects.</figcaption></figure><figure class="ar-figure"><a href="images/research/ar/point-cloud.png" target="_blank" rel="noopener noreferrer" aria-label="Enlarge: Point-cloud representation of the meeting room (opens in a new tab)"><img src="images/research/ar/point-cloud.png" alt="Point-cloud representation of the meeting room" loading="lazy"></a><figcaption>Digital representation: room geometry captured as a point cloud using iPhone LiDAR.</figcaption></figure></div>
+<div class="ar-facts"><div><h2>My contribution</h2><p>Developed the headset prototypes, integrated point-cloud representations, and explored speech, text, pointer and gesture based selection and manipulation.</p></div><div><h2>Tools</h2><p>Unity · C# · Nreal Light · iPhone LiDAR point clouds · interaction prototyping</p></div><div><h2>Design challenge</h2><p>How can a person indicate the intended object when spatial regions overlap or sit inside one another?</p></div></div>
+<section class="ar-section" id="ar-process"><p class="label">Prototype workflow</p><h2>From a room scan to a selected object</h2><ol class="ar-steps"><li><h3>Load the environment</h3><p>Bring the captured indoor point cloud into the application.</p></li><li><h3>Create a region</h3><p>Use the open-hand and victory gestures to initialise interaction and generate a bounding box.</p></li><li><h3>Refine its bounds</h3><p>Move, rotate, or scale the box using pinch-based manipulation.</p></li><li><h3>Select the points</h3><p>Use a pointing gesture to select points within the bounding-box region.</p></li></ol>
+<div class="ar-gallery"><figure class="ar-figure"><a href="images/research/ar/bounding-box.png" target="_blank" rel="noopener noreferrer" aria-label="Enlarge: Prototype showing a bounding box over the room point cloud (opens in a new tab)"><img src="images/research/ar/bounding-box.png" alt="Prototype showing a bounding box over the room point cloud" loading="lazy"></a><figcaption>Bounding-box creation: define a spatial region around the intended object.</figcaption></figure><figure class="ar-figure"><a href="images/research/ar/selected-points.png" target="_blank" rel="noopener noreferrer" aria-label="Enlarge: Selected chair-region points highlighted green in the point cloud (opens in a new tab)"><img src="images/research/ar/selected-points.png" alt="Selected chair-region points highlighted green in the point cloud" loading="lazy"></a><figcaption>Point selection: selected points are highlighted in green within the chosen region.</figcaption></figure></div></section>
+<details class="ar-disclosure" ><summary>Explore the interaction design &amp; prototype development<span>Gesture flow · selection ambiguity · alternatives and trade-offs</span></summary><div class="ar-disclosure-body">
+<section class="ar-section"><p class="label">01 / Interaction flow</p><h2>Connect gestures to visible spatial changes</h2><p>The prototype uses hand gestures for distinct steps: initialisation, box creation, manipulation, and point selection. The workflow separates these actions so the user can define a region before selecting its contents.</p>
+<figure class="ar-figure"><a href="images/research/ar/workflow.png" target="_blank" rel="noopener noreferrer" aria-label="Enlarge: Architecture diagram showing point-cloud generation, bounding-box creation and manipulation, and point selection (opens in a new tab)"><img src="images/research/ar/workflow.png" alt="Architecture diagram showing point-cloud generation, bounding-box creation and manipulation, and point selection" loading="lazy"></a><figcaption>Prototype workflow.</figcaption></figure><div class="ar-gallery"><figure class="ar-figure"><a href="images/research/ar/initialisation.png" target="_blank" rel="noopener noreferrer" aria-label="Enlarge: Nreal prototype initial view of the loaded room point cloud (opens in a new tab)"><img src="images/research/ar/initialisation.png" alt="Nreal prototype initial view of the loaded room point cloud" loading="lazy"></a><figcaption>Initialisation view: the room model is available for spatial interaction.</figcaption></figure><figure class="ar-figure"><a href="images/research/ar/headset-selection.jpg" target="_blank" rel="noopener noreferrer" aria-label="Enlarge: Headset view with selected point-cloud points highlighted over a chair (opens in a new tab)"><img src="images/research/ar/headset-selection.jpg" alt="Headset view with selected point-cloud points highlighted over a chair" loading="lazy"></a><figcaption>Headset interaction example showing highlighted points in the room.</figcaption></figure></div></section>
+<section class="ar-section"><p class="label">02 / The usability problem</p><h2>When several boxes could be the target</h2><p>Spatial selection becomes ambiguous when one box is nested inside another, when objects partly overlap, or when a component belongs to a larger object. A movement intended for one box can instead affect a different box.</p><p>This mismatch between intended and recognised selection is an interaction problem that requires explicit target selection.</p></section>
+<section class="ar-section"><p class="label">03 / Implemented exploration</p><h2>Make one candidate active at a time</h2><p>As a solution, we first implemented three scheduling approaches. Each activates a candidate box for a timed interval, with manipulation affecting the active box.</p><div class="ar-table-scroll"><table><thead><tr><th>Approach</th><th>Selection order</th><th>Design consideration</th></tr></thead><tbody><tr><td>Round robin</td><td>Object-creation order</td><td>Predictable sequence, but the user may need to wait.</td></tr><tr><td>Priority order</td><td>Assigned priority. Proximity is explored</td><td>The ordering needs to match the user’s current task.</td></tr><tr><td>Random order</td><td>Randomised candidate sequence</td><td>Less predictable access to a particular target.</td></tr></tbody></table></div><p class="ar-note">These considerations explain the design space.</p><h3>Let the user finish</h3><p>This implementation does consider about what happens when a timed interval ends during manipulation. The proposed refinement waits for the interaction to finish and adds a short confirmation interval before advancing, allowing room for a follow-up adjustment.</p></section>
+<section class="ar-section"><p class="label">04 / Proposed alternatives</p><h2>Give the user a more direct choice</h2><p>Later designs explores a dropdown or button list, voice commands, gaze with pinch confirmation, and a hand ray with pinch confirmation. It also proposes narrowing the candidate set to nearby objects when the environment contains many selectable regions.</p><p>These are presented as design proposals. Not all were deployed or evaluated.</p></section>
+</div></details>
+<section class="ar-section">
+    <p class="label">Prototype context</p>
+    <h2>Building toward accessible spatial interaction</h2>
+    <p>The wider project concerns accessibility and indoor interaction. These specific examples demonstrate the annotation and selection prototype; they do not establish independent navigation performance or measured accessibility benefits.</p>
+    <p>The external video folder provides a place to explore the Unity and headset interaction recordings.</p>
+    <div class="project-links">
+        <a href="https://smu-my.sharepoint.com/:f:/g/personal/nipunih_ka_2024_msc_smu_edu_sg/IgB-_42CihI5R5d0cEKNsxTNAdp1TD6OCAXPkVkUcLfrKjk?e=tZNgS5" 
+        target="_blank" rel="noopener noreferrer">
+        Open demo video folder ↗</a>
+    </div>
+</section>
+<p class="ar-credit">Descriptions distinguish prototype functionality from proposed design directions.</p></article><p class="research-endnote"><a href="research.html">← Back to selected work</a> · <a href="contact.html">Let’s connect →</a></p></main>
   <footer class="hansi-footer" id="contact">
     <div class="wrap">
 
