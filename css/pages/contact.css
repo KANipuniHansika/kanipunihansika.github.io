@@ -49,6 +49,93 @@
   overflow-wrap: anywhere;
 }
 
+/* Message form */
+.contact-form {
+  margin-top: 44px;
+  padding: 26px;
+  border: 1px solid var(--rule);
+  border-radius: 16px;
+  background: var(--surface);
+}
+
+.contact-form .label {
+  color: var(--rose);
+}
+
+.contact-form h2 {
+  margin: 10px 0 20px;
+  font-size: 1.7rem;
+  letter-spacing: -0.035em;
+}
+
+.contact-form-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.contact-field {
+  margin-bottom: 16px;
+}
+
+.contact-field label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--ink);
+  font-size: 0.9rem;
+  font-weight: 650;
+}
+
+.contact-field input,
+.contact-field textarea {
+  display: block;
+  width: 100%;
+  padding: 11px 14px;
+  border: 1px solid var(--muted);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+}
+
+.contact-field textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.contact-field input:focus-visible,
+.contact-field textarea:focus-visible,
+.contact-form button:focus-visible {
+  outline: 3px solid var(--plum);
+  outline-offset: 2px;
+}
+
+.contact-form-trap {
+  display: none;
+}
+
+.contact-form button {
+  font: inherit;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.contact-form button:disabled {
+  opacity: 0.7;
+  cursor: default;
+}
+
+.contact-form-status:not(:empty) {
+  margin-top: 16px;
+  padding: 14px 16px;
+  border-left: 3px solid var(--rose);
+  border-radius: 0 8px 8px 0;
+  background: var(--feature);
+  color: var(--ink);
+  font-size: 0.95rem;
+  overflow-wrap: anywhere;
+}
+
 .contact-affiliation {
   margin-top: 44px;
   padding: 26px;
@@ -84,7 +171,13 @@
     padding: 44px 0;
   }
 
+  .contact-form,
   .contact-affiliation {
     padding: 20px;
+  }
+
+  .contact-form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
   }
 }

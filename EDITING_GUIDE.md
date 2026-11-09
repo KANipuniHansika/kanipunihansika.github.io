@@ -90,6 +90,21 @@ Save the new PDF over `files/Nipuni_Hansika_Resume.pdf`, keeping exactly the sam
 
 Open `css/theme.css`. Every colour is labelled with where it is used. Click the small coloured square beside a code to open a colour picker.
 
+### The contact form
+
+Messages from the form on the Contact page are delivered to your inbox by a free service called Web3Forms. The wording of the form is in `data/contact.js`, under `form`.
+
+To set it up, or to send messages to a different inbox:
+
+1. Go to https://web3forms.com and enter the email address that should receive the messages.
+2. Open the email they send you and copy the **access key**.
+3. In `data/contact.js`, paste it between the quotation marks on the `accessKey` line.
+4. Publish your changes, then send yourself a test message from the form. Check your spam folder the first time.
+
+Changing your email in `data/site.js` does not change where form messages go. Only a new access key does that.
+
+To answer someone, simply press **Reply** in your email.
+
 ### Add a new research project
 
 This takes four steps.
