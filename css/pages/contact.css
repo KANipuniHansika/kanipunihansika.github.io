@@ -1,0 +1,90 @@
+/* ==========================================================================
+   CONTACT  (you do not need to edit this file)
+   The contact page.
+   ========================================================================== */
+
+.contact-intro {
+  max-width: 800px;
+  margin: auto;
+  padding: 76px 0 64px;
+}
+
+.contact-intro > .label {
+  color: var(--rose);
+}
+
+.contact-intro h1 {
+  margin: 18px 0 24px;
+  font-size: clamp(2.6rem, 6vw, 4.5rem);
+  line-height: 1.12;
+  letter-spacing: -0.055em;
+}
+
+.contact-intro h1 span {
+  color: var(--rose);
+}
+
+.contact-lead {
+  max-width: 52ch;
+  color: var(--muted);
+  font-size: 1.1rem;
+  line-height: 1.85;
+}
+
+.contact-topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 24px 0 30px;
+}
+
+.contact-hello {
+  border-radius: 999px;
+  padding: 12px 24px;
+}
+
+.contact-email {
+  margin-top: 14px;
+  font-size: 0.95rem;
+  overflow-wrap: anywhere;
+}
+
+.contact-affiliation {
+  margin-top: 44px;
+  padding: 26px;
+  border: 1px solid var(--rule);
+  border-radius: 16px;
+  background: var(--feature);
+}
+
+.contact-affiliation h2 {
+  margin: 10px 0;
+  font-size: 1.7rem;
+  letter-spacing: -0.035em;
+}
+
+.contact-affiliation > p:last-child {
+  color: var(--muted);
+}
+
+.contact-signoff {
+  margin-top: 30px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.contact-signoff span {
+  margin-left: 5px;
+  color: var(--rose);
+}
+
+@media (max-width: 650px) {
+  .contact-intro {
+    padding: 44px 0;
+  }
+
+  .contact-affiliation {
+    padding: 20px;
+  }
+}

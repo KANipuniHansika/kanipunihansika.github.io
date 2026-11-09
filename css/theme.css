@@ -1,0 +1,43 @@
+/* ==========================================================================
+   THEME: THE COLOURS AND FONTS OF THE WHOLE WEBSITE
+
+   This is the only stylesheet you should need to edit. Change a value here
+   and it changes on every page.
+
+   Colours are six-character codes such as #8b365b. In Visual Studio Code a
+   small square appears beside each code; click it to open a colour picker.
+   Keep text easy to read against its background.
+   ========================================================================== */
+
+:root {
+  /* BACKGROUNDS ---------------------------------------------------------- */
+  --paper: #fffafb;      /* The background of every page */
+  --surface: #ffffff;    /* Cards, the top bar, and the boxes behind logos */
+  --feature: #f7edf5;    /* Tinted panels, and the highlighted menu item */
+  --footer-background: #f7eef5;    /* The strip at the bottom of every page */
+  --name-pill-background: #f5e7ef; /* Behind "You can call me Hansi" */
+
+  /* TEXT ----------------------------------------------------------------- */
+  --ink: #362738;        /* Main text and headings */
+  --muted: #6d5b6c;      /* Secondary, softer text */
+  --on-accent: #ffffff;  /* Text on filled buttons */
+
+  /* ACCENTS -------------------------------------------------------------- */
+  --rose: #8b365b;       /* Links, labels and highlighted words */
+  --plum: #63386f;       /* Link hover colour, and tags */
+  --hover: #6c2f70;      /* Buttons when the mouse is over them */
+
+  /* LINES ---------------------------------------------------------------- */
+  --rule: #eadce6;       /* Thin dividers and box outlines */
+
+  /* HOMEPAGE PORTRAIT ---------------------------------------------------- */
+  --portrait-gradient-start: #f7dbe8;  /* Shown while the photo loads */
+  --portrait-gradient-end: #e9ddf4;
+  --portrait-shadow-right: #f1e5f3;    /* Soft shape behind the photo, lower right */
+  --portrait-shadow-left: #fbe9ee;     /* Soft shape behind the photo, upper left */
+
+  /* FONTS ---------------------------------------------------------------- */
+  --serif: Georgia, 'Times New Roman', serif;  /* Headings */
+  --sans: system-ui, sans-serif;               /* Body text */
+  --wordmark: Georgia, serif;                  /* The "Hansi" name at the top */
+}

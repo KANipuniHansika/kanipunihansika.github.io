@@ -1,0 +1,53 @@
+/* ==========================================================================
+   TEACHING  (you do not need to edit this file)
+   The list of teaching roles.
+   ========================================================================== */
+
+.teaching-intro {
+  max-width: 65ch;
+  color: var(--muted);
+  margin-bottom: 32px;
+}
+
+.teaching-entry {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 28px;
+  border-top: 1px solid var(--rule);
+  padding: 32px 0;
+}
+
+.teaching-date {
+  color: var(--rose);
+  font-size: .9rem;
+  font-weight: 700;
+}
+
+.teaching-entry h2 {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  margin: 8px 0 12px;
+}
+
+.teaching-entry h3 {
+  font-family: var(--sans);
+  font-size: 1rem;
+  font-weight: 700;
+  margin-top: 20px;
+  letter-spacing: normal;
+}
+
+.teaching-entry ul {
+  padding-left: 20px;
+  color: var(--muted);
+}
+
+.teaching-entry li {
+  margin: 6px 0;
+}
+
+@media (max-width: 650px) {
+  .teaching-entry {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}

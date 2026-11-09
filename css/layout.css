@@ -1,0 +1,178 @@
+/* ==========================================================================
+   LAYOUT  (you do not need to edit this file)
+   The page width, the top bar and menu, the footer, and page sections.
+   ========================================================================== */
+
+.wrap {
+  width: min(1120px, calc(100% - 48px));
+  margin: auto;
+}
+
+/* The link that keyboard users reach first */
+.skip {
+  position: absolute;
+  top: -100px;
+}
+
+.skip:focus {
+  top: 8px;
+  z-index: 2;
+  padding: 8px;
+  background: var(--surface);
+}
+
+/* Top bar */
+.top {
+  background: var(--surface);
+  border-bottom: 1px solid var(--rule);
+}
+
+.bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 0;
+}
+
+/* The "Hansi" name at the top left */
+.hansi-brand {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 4px 0 8px;
+  color: var(--rose);
+  font-family: var(--wordmark);
+  font-size: 2rem;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 1.2;
+  text-decoration: none;
+}
+
+.hansi-brand .hansi-wordmark {
+  display: inline-block;
+  color: var(--rose);
+  font: inherit;
+  letter-spacing: -0.05em;
+}
+
+.hansi-brand::after {
+  content: "";
+  position: absolute;
+  left: 1px;
+  bottom: 3px;
+  width: 58px;
+  height: 5px;
+  border-bottom: 2px solid var(--rose);
+  border-radius: 50%;
+  opacity: 0.35;
+  transform: rotate(-5deg);
+}
+
+.hansi-brand .brand-spark {
+  align-self: flex-start;
+  margin-top: 3px;
+  color: var(--plum);
+  font-size: 0.95rem;
+}
+
+/* Menu */
+.main-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+
+.main-nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 10px;
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    background-color 160ms ease,
+    color 160ms ease;
+}
+
+.main-nav svg {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.main-nav a:hover,
+.main-nav a[aria-current="page"] {
+  background: var(--feature);
+  color: var(--rose);
+  text-decoration: none;
+}
+
+/* Footer */
+.hansi-footer {
+  padding: 24px 0;
+  border-top: 1px solid var(--rule);
+  background: var(--footer-background);
+  color: var(--muted);
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+/* Page sections */
+.section {
+  padding: 62px 0;
+  border-top: 1px solid var(--rule);
+}
+
+@media (max-width: 650px) {
+  .wrap {
+    width: calc(100% - 32px);
+  }
+
+  .bar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .section {
+    padding: 42px 0;
+  }
+
+  .main-nav {
+    gap: 4px;
+  }
+
+  .main-nav a {
+    padding: 7px 9px;
+    font-size: 0.8rem;
+  }
+}
+
+.page {
+  padding-top: 50px;
+  border-top: 0;
+}
+
+.page > h1 {
+  margin-bottom: 28px;
+  font-size: clamp(2.7rem, 6vw, 4.8rem);
+  letter-spacing: -.055em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .main-nav a {
+    transition: none;
+  }
+}

@@ -1,220 +1,29 @@
 <!DOCTYPE html>
+<!--
+  This file only connects the pieces of the page together.
+  To change what the page says, edit data/projects/touch-speech.js
+-->
 <html lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- The title shown on the browser tab and in search results. -->
   <title>Speech &amp; touch for multi-robot systems · Nipuni Hansika</title>
-  <meta content="Nipuni Hansika, HCI researcher and lecturer. Selected work in creativity support, embodied interaction, accessible XR and human–robot interaction." name="description"/>
-  <link href="styles.css" rel="stylesheet"/>
-<link href="research.css" rel="stylesheet"/>
-<link href="research-boxes.css" rel="stylesheet"/>
-<link href="sutd-design.css" rel="stylesheet"/>
+  <meta name="description" content="Nipuni Hansika, HCI researcher and lecturer. Selected work in creativity support, embodied interaction, accessible XR and human–robot interaction.">
 
+  <link rel="stylesheet" href="css/main.css">
 </head>
- <body>
-  <a class="skip" href="#main">
-   Skip to content
-  </a>
-  <header class="top">
-   <div class="wrap bar">
-    <a 
-        class="brand hansi-brand"
-        href="index.html"
-        aria-label="Hansi homepage"
-    >
-        <span class="hansi-wordmark">Hansi</span>
-        <span class="brand-spark" aria-hidden="true">✦</span>
-    </a>
-    <nav class="main-nav" aria-label="Main navigation">
-        <a href="index.html">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="m3 10 9-7 9 7"/>
-            <path d="M5 9v12h14V9M9 21v-8h6v8"/>
-            </svg>
-            <span>Home</span>
-        </a>
 
-        <a href="research.html" aria-current="page">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-            <circle cx="10" cy="10" r="6"/>
-            <path d="m15 15 6 6"/>
-            </svg>
-            <span>Research</span>
-        </a>
+<body data-active-nav="research.html">
+  <noscript>Please turn on JavaScript to view this website.</noscript>
 
-        <a href="publications.html">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M6 3h9l4 4v14H6z"/>
-            <path d="M14 3v5h5M9 12h7M9 16h7"/>
-            </svg>
-            <span>Publications</span>
-        </a>
-
-        <a href="experience.html">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-            <rect x="3" y="7" width="18" height="14" rx="2"/>
-            <path d="M8 7V3h8v4M3 12a21 21 0 0 0 18 0M12 12v3"/>
-            </svg>
-            <span>Experience</span>
-        </a>
-
-        <a href="teaching.html">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="m2 9 10-5 10 5-10 5z"/>
-            <path d="M6 11v6c3 3 9 3 12 0v-6M22 9v7"/>
-            </svg>
-            <span>Teaching</span>
-        </a>
-
-        <a href="education.html">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M12 5v16"/>
-            <path d="M12 5C9 3 5 3 2 4v15c3-1 7-1 10 2
-                    3-3 7-3 10-2V4c-3-1-7-1-10 1Z"/>
-            </svg>
-            <span>Education</span>
-        </a>
-
-        <a href="contact.html">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-            <rect x="3" y="5" width="18" height="14" rx="2"/>
-            <path d="m3 6 9 7 9-7"/>
-            </svg>
-            <span>Contact</span>
-        </a>
-    </nav>
-   </div>
-  </header>
-  <main class="wrap research-page project-detail sutd-page" id="main"><a class="back-projects" href="research.html#touch-speech">← All research projects</a><article class="research-project" id="touch-speech" aria-labelledby="sutd-title">
-<header class="sutd-hero">
-  <p class="label">Human–robot interaction · SUTD · Feb 2018 – Jul 2019</p>
-  <h1 id="sutd-title">Helping one person<br><em>guide a team of robots.</em></h1>
-  <p class="project-subtitle">Complementing Speech Interaction Design with Touch for Multi-Robot Systems</p>
-  <p class="project-affiliation">Singapore University of Technology and Design · IEEE TENCON 2019</p>
-  <p class="project-overview">How can one person supervise several robots while navigating, monitoring camera views, and identifying targets? This project explored a complementary speech-and-touch interface in a unity simulation.</p>
-  <div class="project-links">
-    <a class="button" href="papers/touch-speech-multi-robot-2019.pdf" target="_blank" rel="noopener noreferrer">Read the TENCON 2019 paper ↗</a>
-    <a href="https://ieeexplore.ieee.org/document/8929506" target="_blank" rel="noopener noreferrer">Paper ↗</a>
-    <a href="#sutd-interface">Explore the interface ↓</a>
-  </div>
-</header>
-<dl class="sutd-meta">
-  <div><dt>My role</dt><dd>Interface co-design, photoshop mockups, multimodal prototyping, and contributions to user studies, analysis, and the paper.</dd></div>
-  <div><dt>Research context</dt><dd>Research Assistant at the Singapore University of Technology and Design. Published at IEEE TENCON 2019.</dd></div>
-  <div><dt>Built with</dt><dd>Unity, C#, Adobe Photoshop, Android, Python, and Arduino.</dd></div>
-</dl>
-<div class="sutd-published" id="sutd-interface">
-<figure class="sutd-figure"><a href="images/research/sutd/published-interface.png" target="_blank" rel="noopener noreferrer" aria-label="Enlarge image: Annotated graphical interface from Figure 4 of the TENCON 2019 paper (opens in a new tab)"><img src="images/research/sutd/published-interface.png" alt="Annotated graphical interface from Figure 4 of the TENCON 2019 paper" loading="lazy"></a><figcaption>Use Interface: robot camera views, map, navigation controls, warnings, and mission indicators.</figcaption></figure>
-<div><h2>The interface in the published paper</h2><p>The selected robot’s camera fills the main view, with controls and supporting information arranged around its edges. The paper describes an iterative design process that considered visual interference, foreground–background contrast, and selection feedback.</p><p>The study involved six participants operating one, two, and three robots. Task performance and perceived workload were examined using NASA-TLX.</p></div></div>
-
-
-<details class="sutd-process"><summary><span>Explore the interface design process</span><span class="sutd-summary-note">Photoshop reviews → panel behaviour → Unity implementation</span></summary>
-<div class="sutd-process-content"><p class="sutd-process-intro">The following project materials show how I worked through interface layout, visual contrast, and component behaviour before and alongside implementation. The Photoshop concepts and development screenshots document design exploration. They are distinct from the published interface shown above.</p><section class="sutd-stage" aria-labelledby="published-behaviour"><p class="label">Published interaction / Speech and touch</p><h2 id="published-behaviour">How the modalities complement each other</h2><p>Touch supports selecting a robot, aiming the surveillance camera, and continuous manual navigation. For remote control, a sustained touch selects a secondary robot; then speech commands can then address it without switching the main camera view.</p><div class="sutd-image-grid"><figure class="sutd-figure"><a href="images/research/sutd/published-remote-selection.png" target="_blank" rel="noopener noreferrer" aria-label="Enlarge: Interface showing a blue border around the remotely selected robot preview (opens in a new tab)"><img src="images/research/sutd/published-remote-selection.png" alt="Interface showing a blue border around the remotely selected robot preview" loading="lazy"></a><figcaption>Remote selection: the secondary robot is highlighted in blue while the main view stays on the current robot.</figcaption></figure><figure class="sutd-figure"><a href="images/research/sutd/published-manual-mode.png" target="_blank" rel="noopener noreferrer" aria-label="Enlarge: Robot interface with yellow border and manual-mode navigation controls (opens in a new tab)"><img src="images/research/sutd/published-manual-mode.png" alt="Robot interface with yellow border and manual-mode navigation controls" loading="lazy"></a><figcaption>Manual navigation: the yellow border indicates manual mode, with touch controls available for continuous steering.</figcaption></figure></div><p class="sutd-design-note">These user interaction examples are separate from the Photoshop design exploration.</p></section>
-<section class="sutd-stage" aria-labelledby="sutd-stage1"><p class="label">Stage 01 / Early Photoshop designs</p><h2 id="sutd-stage1">Checking controls against changing backgrounds</h2><p>Controls and the map sit over a camera view, where the background changes as the robot moves. In the first design phase, I reviewed the overlays against bright and dark scenes, considering their visibility and how much of the scene they covered.</p>
-<div class="sutd-image-grid"><figure class="sutd-figure"><a href="images/research/sutd/early-bright.png" target="_blank" rel="noopener noreferrer" aria-label="Enlarge image: Early Photoshop interface over a bright city background (opens in a new tab)"><img src="images/research/sutd/early-bright.png" alt="Early Photoshop interface over a bright city background" loading="lazy"></a><figcaption>Bright-background review: inspecting the map, control overlays, and text against a light scene.</figcaption></figure><figure class="sutd-figure"><a href="images/research/sutd/early-dark.png" target="_blank" rel="noopener noreferrer" aria-label="Enlarge image: Early Photoshop interface over a dark background (opens in a new tab)"><img src="images/research/sutd/early-dark.png" alt="Early Photoshop interface over a dark background" loading="lazy"></a><figcaption>Dark-background review: examining the same components against a darker scene.</figcaption></figure></div>
-<p class="sutd-design-note"><strong>Design focus:</strong> foreground–background contrast, overlay visibility, and the balance between information and camera-view space. These are visual review examples, rather than a separate measured usability result.</p></section>
-<section class="sutd-stage" aria-labelledby="sutd-stage2"><p class="label">Stage 02 / Refined Photoshop concepts</p><h2 id="sutd-stage2">Defining controls, panels, and their states</h2><p>Further review explored how the camera previews, map, and speed controller could behave. The mockups show both an information-rich view and more compact states, making the intended interactions visible before implementation.</p>
-<div class="sutd-image-grid"><figure class="sutd-figure"><a href="images/research/sutd/review-overview.png" target="_blank" rel="noopener noreferrer" aria-label="Enlarge image: Refined Photoshop interface with robot previews, map, and speed dial (opens in a new tab)"><img src="images/research/sutd/review-overview.png" alt="Refined Photoshop interface with robot previews, map, and speed dial" loading="lazy"></a><figcaption>Overview state: robot previews and the map are visible around the main camera view.</figcaption></figure><figure class="sutd-figure"><a href="images/research/sutd/speed-state.png" target="_blank" rel="noopener noreferrer" aria-label="Enlarge image: Photoshop mockup of the controller when expected and current speeds match (opens in a new tab)"><img src="images/research/sutd/speed-state.png" alt="Photoshop mockup of the controller when expected and current speeds match" loading="lazy"></a><figcaption>Controller state: a mockup exploring the display when expected speed equals current speed.</figcaption></figure><figure class="sutd-figure"><a href="images/research/sutd/map-hidden.png" target="_blank" rel="noopener noreferrer" aria-label="Enlarge image: Photoshop mockup with map panel hidden (opens in a new tab)"><img src="images/research/sutd/map-hidden.png" alt="Photoshop mockup with map panel hidden" loading="lazy"></a><figcaption>Map hidden: the map can be collapsed to reveal more of the camera view.</figcaption></figure><figure class="sutd-figure"><a href="images/research/sutd/previews-hidden.png" target="_blank" rel="noopener noreferrer" aria-label="Enlarge image: Photoshop mockup with camera previews collapsed into tabs (opens in a new tab)"><img src="images/research/sutd/previews-hidden.png" alt="Photoshop mockup with camera previews collapsed into tabs" loading="lazy"></a><figcaption>Previews collapsed: camera thumbnails become labelled robot tabs while the map remains visible.</figcaption></figure></div>
-<p class="sutd-design-note"><strong>Design focus:</strong> panel visibility, consistent placement, state feedback, and reducing the screen area occupied by supporting views.</p></section>
-<section class="sutd-stage" aria-labelledby="sutd-stage3"><p class="label">Stage 03 / Unity development</p><h2 id="sutd-stage3">Bringing the interaction into a simulated mission</h2><p>The Unity prototype places semi-autonomous robots in an urban search scenario. Robots follow routes but need operator input at junctions and when obstacles interrupt navigation. The operator can inspect the environment, aim the surveillance camera, and capture targets while monitoring progress.</p>
-<div class="sutd-image-grid"><figure class="sutd-figure"><a href="images/research/sutd/simulation-route.jpg" target="_blank" rel="noopener noreferrer" aria-label="Enlarge image: Top-down Unity mission route with path indicators and road blocks (opens in a new tab)"><img src="images/research/sutd/simulation-route.jpg" alt="Top-down Unity mission route with path indicators and road blocks" loading="lazy"></a><figcaption>Mission layout: the route and road blocks provide navigation situations for the prototype.</figcaption></figure><figure class="sutd-figure"><a href="images/research/sutd/simulation-junction.png" target="_blank" rel="noopener noreferrer" aria-label="Enlarge image: Unity screenshot requesting a direction at a road junction (opens in a new tab)"><img src="images/research/sutd/simulation-junction.png" alt="Unity screenshot requesting a direction at a road junction" loading="lazy"></a><figcaption>Human intervention: a junction prompt asks the operator to choose a direction.</figcaption></figure><figure class="sutd-figure"><a href="images/research/sutd/simulation-capture.png" target="_blank" rel="noopener noreferrer" aria-label="Enlarge image: Unity screenshot displaying Target Captured (opens in a new tab)"><img src="images/research/sutd/simulation-capture.png" alt="Unity screenshot displaying Target Captured" loading="lazy"></a><figcaption>Task feedback: a capture notification and updated counter show mission progress.</figcaption></figure><figure class="sutd-figure"><a href="images/research/sutd/simulation-obstacle.png" target="_blank" rel="noopener noreferrer" aria-label="Enlarge image: Unity screenshot displaying Obstacle Detected (opens in a new tab)"><img src="images/research/sutd/simulation-obstacle.png" alt="Unity screenshot displaying Obstacle Detected" loading="lazy"></a><figcaption>Interruption feedback: an obstacle warning signals that the operator needs to respond.</figcaption></figure></div>
-<p class="sutd-design-note">These are development screenshots that illustrate the simulation and interaction scenarios.</p></section>
-
-</div></details>
-<section class="sutd-section">
-    <h2>Publication &amp; credits</h2>
-    <p>Kritika Johari, Nipuni Karumpulli and U-Xuan Tan. 2019. 
-        <em>Complementing Speech Interaction Design with Touch for Multi-Robot Systems.</em> TENCON ’19. Paper: 
-        <a href="https://ieeexplore.ieee.org/document/8929506" target="_blank" rel="noopener noreferrer">10.1109/TENCON.2019.8929506</a>.
-    </p>
-    <p>Paper figures are credited to Johari et al. (2019).
-    </p>
-</section>
-</article><p class="research-endnote"><a href="research.html">← Back to selected work</a> · <a href="contact.html">Get in touch →</a></p></main>
-  <footer class="hansi-footer" id="contact">
-    <div class="wrap">
-
-        <div
-        class="social-links"
-        role="group"
-        aria-label="Contact and social profiles"
-        >
-
-        <!-- EMAIL -->
-        <a
-            class="social-icon"
-            href="mailto:nipuni.h@eie.ruh.ac.lk"
-            aria-label="Email Nipuni Hansika"
-            title="Email"
-        >
-            <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.8"
-            aria-hidden="true"
-            >
-            <rect x="3" y="5" width="18" height="14" rx="2"/>
-            <path d="m3 6 9 7 9-7"/>
-            </svg>
-        </a>
-
-        <!-- GITHUB -->
-        <a
-            class="social-icon"
-            href="https://github.com/KANipuniHansika"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="GitHub — opens in a new tab"
-            title="GitHub"
-        >
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path
-                fill="currentColor"
-                d="M12 .75a11.25 11.25 0 0 0-3.56 21.92c.56.1.77-.24.77-.54v-2.1c-3.13.68-3.79-1.33-3.79-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.69.08-.69 1.13.08 1.73 1.16 1.73 1.16 1 1.72 2.63 1.22 3.27.93.1-.73.39-1.22.71-1.5-2.5-.29-5.13-1.25-5.13-5.56 0-1.23.44-2.23 1.16-3.01-.12-.29-.5-1.43.11-2.97 0 0 .95-.3 3.1 1.15a10.8 10.8 0 0 1 5.64 0c2.15-1.46 3.09-1.15 3.09-1.15.62 1.54.23 2.68.12 2.97.72.78 1.15 1.78 1.15 3.01 0 4.32-2.63 5.27-5.14 5.55.4.35.76 1.03.76 2.08v3.11c0 .3.2.65.78.54A11.25 11.25 0 0 0 12 .75Z"
-            />
-            </svg>
-        </a>
-
-        <!-- LINKEDIN -->
-        <a
-            class="social-icon"
-            href="https://www.linkedin.com/in/nipuni-hansika-0a193b21b"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="LinkedIn — opens in a new tab"
-            title="LinkedIn"
-        >
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path
-                fill="currentColor"
-                d="M5.5 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM4 9h3v12H4V9Zm5 0h3v1.6c.7-1.1 1.8-1.9 3.7-1.9 3.3 0 4.3 2.1 4.3 5.2V21h-3v-6.3c0-1.7-.3-3-2.2-3-2 0-2.8 1.4-2.8 3.5V21H9V9Z"
-            />
-            </svg>
-        </a>
-
-        <!-- GOOGLE SCHOLAR -->
-        <a
-            class="social-icon"
-            href="https://scholar.google.com/citations?hl=en&amp;user=lKL3WSQAAAAJ"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Google Scholar — opens in a new tab"
-            title="Google Scholar"
-        >
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path
-                fill="currentColor"
-                d="M12 3 1 9l11 6 9-4.9V17h2V9L12 3Zm-7 10v4c0 2.2 3.1 4 7 4s7-1.8 7-4v-4l-7 3.8L5 13Z"
-            />
-            </svg>
-        </a>
-
-        </div>
-
-        <p>© 2026 Nipuni Hansika. All rights reserved.</p>
-    </div>
- </footer>
- </body>
+  <script src="js/core/setup.js"></script>
+  <script src="data/site.js"></script>
+  <script src="data/projects/touch-speech.js"></script>
+  <script src="js/core/icons.js"></script>
+  <script src="js/core/helpers.js"></script>
+  <script src="js/core/layout.js"></script>
+  <script src="js/pages/project.js"></script>
+</body>
 </html>
-

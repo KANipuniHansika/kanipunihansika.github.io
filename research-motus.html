@@ -1,267 +1,29 @@
 <!DOCTYPE html>
+<!--
+  This file only connects the pieces of the page together.
+  To change what the page says, edit data/projects/motus.js
+-->
 <html lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- The title shown on the browser tab and in search results. -->
   <title>MOTUS · Nipuni Hansika</title>
-  <meta content="Nipuni Hansika, HCI researcher and lecturer. Selected work in creativity support, embodied interaction, accessible XR and human–robot interaction." name="description"/>
-  <link href="styles.css" rel="stylesheet"/>
-<link href="research.css" rel="stylesheet"/>
-<link href="research-boxes.css" rel="stylesheet"/>
- <link href="motus.css" rel="stylesheet">
+  <meta name="description" content="Nipuni Hansika, HCI researcher and lecturer. Selected work in creativity support, embodied interaction, accessible XR and human–robot interaction.">
+
+  <link rel="stylesheet" href="css/main.css">
 </head>
- <body>
-  <a class="skip" href="#main">
-   Skip to content
-  </a>
-  <header class="top">
-   <div class="wrap bar">
-    <a 
-        class="brand hansi-brand"
-        href="index.html"
-        aria-label="Hansi homepage"
-    >
-        <span class="hansi-wordmark">Hansi</span>
-        <span class="brand-spark" aria-hidden="true">✦</span>
-    </a>
-    <nav class="main-nav" aria-label="Main navigation">
-        <a href="index.html">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="m3 10 9-7 9 7"/>
-            <path d="M5 9v12h14V9M9 21v-8h6v8"/>
-            </svg>
-            <span>Home</span>
-        </a>
 
-        <a href="research.html" aria-current="page">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-            <circle cx="10" cy="10" r="6"/>
-            <path d="m15 15 6 6"/>
-            </svg>
-            <span>Research</span>
-        </a>
+<body data-active-nav="research.html">
+  <noscript>Please turn on JavaScript to view this website.</noscript>
 
-        <a href="publications.html">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M6 3h9l4 4v14H6z"/>
-            <path d="M14 3v5h5M9 12h7M9 16h7"/>
-            </svg>
-            <span>Publications</span>
-        </a>
-
-        <a href="experience.html">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-            <rect x="3" y="7" width="18" height="14" rx="2"/>
-            <path d="M8 7V3h8v4M3 12a21 21 0 0 0 18 0M12 12v3"/>
-            </svg>
-            <span>Experience</span>
-        </a>
-
-        <a href="teaching.html">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="m2 9 10-5 10 5-10 5z"/>
-            <path d="M6 11v6c3 3 9 3 12 0v-6M22 9v7"/>
-            </svg>
-            <span>Teaching</span>
-        </a>
-
-        <a href="education.html">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M12 5v16"/>
-            <path d="M12 5C9 3 5 3 2 4v15c3-1 7-1 10 2
-                    3-3 7-3 10-2V4c-3-1-7-1-10 1Z"/>
-            </svg>
-            <span>Education</span>
-        </a>
-
-        <a href="contact.html">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-            <rect x="3" y="5" width="18" height="14" rx="2"/>
-            <path d="m3 6 9 7 9-7"/>
-            </svg>
-            <span>Contact</span>
-        </a>
-    </nav>
-   </div>
-  </header>
-  <main class="wrap research-page project-detail motus-page" id="main">
-<a class="back-projects" href="research.html#motus">← All research projects</a>
-<article class="research-project" id="motus" aria-labelledby="motus-title">
-<header class="motus-hero"><p class="label">Creativity support · Singapore Management University · 2025–2026</p>
-<h1 id="motus-title">MOTUS</h1><p class="motus-deck">Helping creative intention<br><em>take shape through movement.</em></p><p class="project-affiliation"></p><p class="project-subtitle">Motor-Mediated Creativity: Bridging Embodied Skill Training and Digital Expression</p><p class="project-affiliation">Singapore Management University · ACM CHI 2026</p>
-<p class="project-overview">MOTUS explores how does learning to control a pen-stylus can support expressive digital drawing. It brings together structured motor practice, feedback informed by expert strokes, and embodied ideation prompts for creative exploration.</p>
-<div class="project-links"><a class="button" href="papers/motor-mediated-creativity-2026.pdf" target="_blank" rel="noopener noreferrer">Read the CHI 2026 paper ↗</a><a href="https://dl.acm.org/doi/10.1145/3772318.3791935" target="_blank" rel="noopener noreferrer">DOI ↗</a><a href="#motus-interface">Explore the interface ↓</a></div></header>
-<figure class="motus-figure "><a href="images/research/motus/overview.jpg" target="_blank" rel="noopener noreferrer" aria-label="Enlarge: Overview illustration of MOTUS motor guidance, feedback, and creative prompts (opens in a new tab)"><img src="images/research/motus/overview.jpg" alt="Overview illustration of MOTUS motor guidance, feedback, and creative prompts" loading="lazy"></a><figcaption>MOTUS overview, from the CHI 2026 paper. Structured practice and embodied prompts scaffold embodied skill development and creative expression.</figcaption></figure>
-<dl class="motus-meta"><div><dt>My role</dt><dd>System design and development, stylus capture, feedback interfaces, and user research; equal-contribution co-author.</dd></div><div><dt>Research context</dt><dd>MSc research at Singapore Management University, supervised by Prof. Thivya Kandappu.</dd></div><div><dt>Built with</dt><dd>HTML, CSS, JavaScript, Python, Wacom SDK, and a Wacom Movink 13 pen display.</dd></div></dl>
-<section class="motus-section"><p class="label">The research question</p><h2>What if creativity support also trained the hand?</h2><p>Digital tools offer many ways to make images, but novices can still struggle to translate an intention into a controlled mark. MOTUS investigates motor fluency as a resource for expression: learning how pressure, speed, and movement shape what appears on the canvas.</p></section>
-<section class="motus-section" id="motus-interface"><p class="label">The interaction</p><h2>Practice a movement. Understand it. Explore with it.</h2>
-<div class="motus-flow"><div><span>01</span><h3>Practise expressive strokes</h3><p>Work through stroke primitives that foreground pressure, velocity, and directional control.</p></div><div><span>02</span><h3>Review actionable feedback</h3><p>Inspect corrective text, similarity summaries, and temporal plots to decide what to adjust.</p></div><div><span>03</span><h3>Apply it creatively</h3><p>Move into open-ended drawing, using embodied prompts that connect imagined sensations with movement.</p></div></div>
-<figure class="motus-figure motus-screen"><a href="images/research/motus/combined-feedback.png" target="_blank" rel="noopener noreferrer" aria-label="Enlarge: MOTUS feedback panel showing corrective text, a radar plot and a pressure trace (opens in a new tab)"><img src="images/research/motus/combined-feedback.png" alt="MOTUS feedback panel showing corrective text, a radar plot and a pressure trace" loading="lazy"></a><figcaption>The combined feedback view: a rating and corrective text sit alongside parameter-level similarity and a pressure comparison with expert drawings. This is an example interaction state, not an aggregate result.</figcaption></figure>
-<div class="motus-reading"><div><h3>What should I change?</h3><p>Descriptive feedback turns differences in stroke execution into a concrete next action.</p></div><div><h3>Which parameter needs attention?</h3><p>The radar view summarises similarity across pressure, velocity, and tilt.</p></div><div><h3>Where did it diverge?</h3><p>The temporal plot compares pressure over the stroke, helping locate differences during execution.</p></div></div></section>
-<details class="motus-disclosure"><summary>Explore the interface and feedback design<span>Practice canvas · feedback alternatives · embodied prompts</span></summary><div class="motus-disclosure-body">
-<section class="motus-section"><p class="label">01 / Keep drawing central</p><h2>A canvas with guidance when needed</h2><p>The prototype places the drawing canvas at the centre of the task. A reference preview and task instructions support stroke practice. Feedback is presented after each attempt. In the creative stage, a prompt panel provides a starting point for expression.</p>
-<div class="motus-gallery "><figure class="motus-figure "><a href="images/research/motus/stroke-practice.png" target="_blank" rel="noopener noreferrer" aria-label="Enlarge: Pressure-staccato stroke practice on the MOTUS canvas (opens in a new tab)"><img src="images/research/motus/stroke-practice.png" alt="Pressure-staccato stroke practice on the MOTUS canvas" loading="lazy"></a><figcaption>Stroke practice interface: instructions, an attempt counter, and the drawing surface.</figcaption></figure><figure class="motus-figure "><a href="images/research/motus/reference-preview.png" target="_blank" rel="noopener noreferrer" aria-label="Enlarge: MOTUS reference stroke preview beside the drawing canvas (opens in a new tab)"><img src="images/research/motus/reference-preview.png" alt="MOTUS reference stroke preview beside the drawing canvas" loading="lazy"></a><figcaption>Reference preview: an example stroke is available beside the practice canvas.</figcaption></figure></div>
-</section><section class="motus-section"><p class="label">02 / Compare feedback representations</p><h2>From measurements to interpretable guidance</h2><p>The formative work explored different ways of presenting stroke feedback. These interface screenshots document analytic graphs, descriptive text, raw metrics, and reference imagery. They show interface alternatives considered during development, rather than a confirmed chronological sequence of redesigns.</p>
-<div class="motus-gallery "><figure class="motus-figure "><a href="images/research/motus/early-graphs.png" target="_blank" rel="noopener noreferrer" aria-label="Enlarge: Graphical stroke-feedback panel from the thesis prototype (opens in a new tab)"><img src="images/research/motus/early-graphs.png" alt="Graphical stroke-feedback panel from the thesis prototype" loading="lazy"></a><figcaption>Analytic graphs expose changes in stroke parameters.</figcaption></figure><figure class="motus-figure "><a href="images/research/motus/early-text.png" target="_blank" rel="noopener noreferrer" aria-label="Enlarge: Textual corrective-feedback panel from the thesis prototype (opens in a new tab)"><img src="images/research/motus/early-text.png" alt="Textual corrective-feedback panel from the thesis prototype" loading="lazy"></a><figcaption>Descriptive text translates measurements into suggestions.</figcaption></figure><figure class="motus-figure "><a href="images/research/motus/early-metrics.png" target="_blank" rel="noopener noreferrer" aria-label="Enlarge: Raw numerical stroke-metrics panel from the thesis prototype (opens in a new tab)"><img src="images/research/motus/early-metrics.png" alt="Raw numerical stroke-metrics panel from the thesis prototype" loading="lazy"></a><figcaption>Raw metrics present numerical stroke measurements.</figcaption></figure><figure class="motus-figure "><a href="images/research/motus/early-reference.png" target="_blank" rel="noopener noreferrer" aria-label="Enlarge: Reference stroke image panel from the thesis prototype (opens in a new tab)"><img src="images/research/motus/early-reference.png" alt="Reference stroke image panel from the thesis prototype" loading="lazy"></a><figcaption>Reference imagery offers a visual target for comparison.</figcaption></figure></div>
-<p class="motus-callout">In the formative study, 37 of 42 participants selected descriptive textual feedback as the most useful feedback type. The later interface combines interpretable text with supporting visualisations.</p></section>
-<section class="motus-section"><p class="label">03 / Inspect an example</p><h2>Make the motor signal visible</h2><p>These supplied plots are from a single first-attempt example. The pressure graph overlays an expert reference and novice trace; the radar plot summarises parameter similarities. They illustrate feedback presentation, not a before-and-after training comparison.</p>
-<div class="motus-gallery "><figure class="motus-figure "><a href="images/research/motus/pressure-example.png" target="_blank" rel="noopener noreferrer" aria-label="Enlarge: Expert and novice pressure traces over time for one stroke attempt (opens in a new tab)"><img src="images/research/motus/pressure-example.png" alt="Expert and novice pressure traces over time for one stroke attempt" loading="lazy"></a><figcaption>Pressure comparison: blue is the expert reference and orange is the novice attempt. Shading is the prototype’s correlation annotation.</figcaption></figure><figure class="motus-figure "><a href="images/research/motus/radar-example.png" target="_blank" rel="noopener noreferrer" aria-label="Enlarge: Radar plot of tilt velocity and pressure ratings for one attempt (opens in a new tab)"><img src="images/research/motus/radar-example.png" alt="Radar plot of tilt velocity and pressure ratings for one attempt" loading="lazy"></a><figcaption>Radar example: the displayed scores summarise parameter-level similarity.</figcaption></figure></div>
-</section><section class="motus-section"><p class="label">04 / Support expressive exploration</p><h2>From instructions to embodied imagination</h2><p>The formative study compared unprompted drawing, generic prompts, and embodied prompts. Embodied prompts frame marks through sensory or physical metaphors, encouraging learners to connect movement with expressive intent.</p>
-<div class="motus-gallery motus-gallery-three"><figure class="motus-figure "><a href="images/research/motus/prompt-none.png" target="_blank" rel="noopener noreferrer" aria-label="Enlarge: Creative drawing interface without an ideation prompt (opens in a new tab)"><img src="images/research/motus/prompt-none.png" alt="Creative drawing interface without an ideation prompt" loading="lazy"></a><figcaption>No prompt: an open creative drawing task.</figcaption></figure><figure class="motus-figure "><a href="images/research/motus/prompt-generic.png" target="_blank" rel="noopener noreferrer" aria-label="Enlarge: Creative drawing interface with a generic ideation prompt (opens in a new tab)"><img src="images/research/motus/prompt-generic.png" alt="Creative drawing interface with a generic ideation prompt" loading="lazy"></a><figcaption>Generic prompt: guidance around the expressive theme.</figcaption></figure><figure class="motus-figure "><a href="images/research/motus/prompt-embodied.png" target="_blank" rel="noopener noreferrer" aria-label="Enlarge: Creative drawing interface with an embodied ideation prompt (opens in a new tab)"><img src="images/research/motus/prompt-embodied.png" alt="Creative drawing interface with an embodied ideation prompt" loading="lazy"></a><figcaption>Embodied prompt: a sensory or movement-based starting point.</figcaption></figure></div>
-<p class="motus-callout">In the formative study, 33 of 42 participants preferred embodied prompts over generic prompts.</p></section>
-</div></details>
-<section class="motus-section"><p class="label">Our implementation</p><h2>Connecting stylus input, feedback, and creative tasks</h2><div class="motus-implementation"><div><ul><li>Developed the web interface and Python backend, including real-time stylus capture with the Wacom SDK.</li><li>Implemented feedback views combining ratings, corrective text, radar plots, and temporal comparisons.</li><li>Integrated structured practice with prompt-based creative drawing tasks.</li><li>Contributed to formative and controlled studies and quantitative and qualitative analysis.</li></ul></div><figure class="motus-figure "><a href="images/research/motus/architecture.png" target="_blank" rel="noopener noreferrer" aria-label="Enlarge: MOTUS architecture linking motor training to creative expression and feedback modules (opens in a new tab)"><img src="images/research/motus/architecture.png" alt="MOTUS architecture linking motor training to creative expression and feedback modules" loading="lazy"></a><figcaption>System architecture: expert references, feedback, prompts, and interface components.</figcaption></figure></div></section>
-<section class="motus-section"><p class="label">Research evidence</p><h2>Studying motor fluency and expression</h2><div class="motus-evidence"><div><strong>42</strong><h3>Formative participants</h3><p>Investigated novice challenges, feedback representations, and prompt preferences.</p></div><div><strong>36</strong><h3>Controlled evaluation</h3><p>A 2 × 2 design compared motor feedback and ideation prompts, separately and together.</p></div><div><strong>9</strong><h3>iPad validation participants</h3><p>A separate cohort explored the full intervention on another tablet platform.</p></div></div>
-<p>The published evaluation links gains in measured motor fluency with expert-rated expressive improvement. These findings support motor training as a promising direction for creativity-support tools. However they do not establish long-term retention or generalisation to every form of digital art.</p>
-<details class="motus-disclosure">
-    <summary>View illustrative drawing pairs
-        <span>Same participant and theme, before and after the intervention
-        </span>
-    </summary>
-    <div class="motus-disclosure-body">
-        <div class="motus-gallery ">
-            <figure class="motus-figure ">
-                <a href="images/research/motus/drawing-before-happiness.png" 
-                target="_blank" rel="noopener noreferrer" 
-                aria-label="Enlarge: Participant P37 baseline abstract drawing for Happiness (opens in a new tab)">
-                <img src="images/research/motus/drawing-before-happiness.png" 
-                alt="Participant P37 baseline abstract drawing for Happiness" 
-                loading="lazy">
-                </a>
-                <figcaption>Before: P37, Happiness, full-MOTUS group.
-                </figcaption>
-            </figure>
-            <figure class="motus-figure ">
-                <a href="images/research/motus/drawing-after-happiness.png" 
-                target="_blank" rel="noopener noreferrer" 
-                aria-label="Enlarge: Participant P37 post-intervention abstract drawing for Happiness (opens in a new tab)">
-                <img src="images/research/motus/drawing-after-happiness.png" 
-                alt="Participant P37 post-intervention abstract drawing for Happiness" 
-                loading="lazy"></a>
-                <figcaption>After: P37, Happiness, full-MOTUS group.</figcaption>
-            </figure>
-        </div>
-        <div class="motus-gallery ">
-            <figure class="motus-figure ">
-                <a href="images/research/motus/drawing-before-chaos.png" 
-                target="_blank" rel="noopener noreferrer" 
-                aria-label="Enlarge: Participant P15 baseline abstract drawing for Chaos (opens in a new tab)">
-                <img src="images/research/motus/drawing-before-chaos.png" 
-                alt="Participant P15 baseline abstract drawing for chaos" 
-                loading="lazy">
-                </a>
-                <figcaption>Before: P15, Chaos, group with ideation prompts alone.
-                </figcaption>
-            </figure>
-            <figure class="motus-figure ">
-                <a href="images/research/motus/drawing-after-chaos.png" 
-                target="_blank" rel="noopener noreferrer" 
-                aria-label="Enlarge: Participant P15 post-intervention abstract drawing for Chaos (opens in a new tab)">
-                <img src="images/research/motus/drawing-after-chaos.png" 
-                alt="Participant P15 post-intervention abstract drawing for Chaos" 
-                loading="lazy"></a>
-                <figcaption>After: P15, Chaos, group with ideation prompts alone.</figcaption>
-            </figure>
-        </div>
-        <p>Illustrative samples from Figure 6 of the paper. A single pair does not summarise all participant outcomes or independently demonstrate an intervention effect.
-        </p>
-    </div>
-</details>
-</section><section class="motus-section motus-reflection"><p class="label">Design takeaway</p><h2>Support the maker’s skill, as well as the outcome.</h2><p>For me, MOTUS connects interface design with embodied learning: making feedback understandable, keeping creative decisions with the person, and giving learners a way to connect a physical action with its expressive effect.</p></section>
-<section class="motus-section">
-    <h2>Publication &amp; credits</h2>
-    <p>Pasindu Bolonghege, Gevindu Ganganath, Nipuni Arachchige, Paul Benedict Lincoln, and Thivya Kandappu. 2026. 
-        <em>Motor-Mediated Creativity: Bridging Embodied Skill Training and Digital Expression.</em> CHI ’26. DOI: 
-        <a href="https://dl.acm.org/doi/10.1145/3772318.3791935" target="_blank" rel="noopener noreferrer">10.1145/3772318.3791935</a>.
-    </p>
-    <p>Equal-contribution co-author. Paper figures are credited to Bolonghege et al. (2026), licensed under a Creative Commons Attribution 4.0 International License.
-    </p>
-</section>
-</article><p class="research-endnote"><a href="research.html">← Back to selected work</a> · <a href="contact.html">Let’s connect →</a></p></main>
-  <footer class="hansi-footer" id="contact">
-    <div class="wrap">
-
-        <div
-        class="social-links"
-        role="group"
-        aria-label="Contact and social profiles"
-        >
-
-        <!-- EMAIL -->
-        <a
-            class="social-icon"
-            href="mailto:nipuni.h@eie.ruh.ac.lk"
-            aria-label="Email Nipuni Hansika"
-            title="Email"
-        >
-            <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.8"
-            aria-hidden="true"
-            >
-            <rect x="3" y="5" width="18" height="14" rx="2"/>
-            <path d="m3 6 9 7 9-7"/>
-            </svg>
-        </a>
-
-        <!-- GITHUB -->
-        <a
-            class="social-icon"
-            href="https://github.com/KANipuniHansika"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="GitHub — opens in a new tab"
-            title="GitHub"
-        >
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path
-                fill="currentColor"
-                d="M12 .75a11.25 11.25 0 0 0-3.56 21.92c.56.1.77-.24.77-.54v-2.1c-3.13.68-3.79-1.33-3.79-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.69.08-.69 1.13.08 1.73 1.16 1.73 1.16 1 1.72 2.63 1.22 3.27.93.1-.73.39-1.22.71-1.5-2.5-.29-5.13-1.25-5.13-5.56 0-1.23.44-2.23 1.16-3.01-.12-.29-.5-1.43.11-2.97 0 0 .95-.3 3.1 1.15a10.8 10.8 0 0 1 5.64 0c2.15-1.46 3.09-1.15 3.09-1.15.62 1.54.23 2.68.12 2.97.72.78 1.15 1.78 1.15 3.01 0 4.32-2.63 5.27-5.14 5.55.4.35.76 1.03.76 2.08v3.11c0 .3.2.65.78.54A11.25 11.25 0 0 0 12 .75Z"
-            />
-            </svg>
-        </a>
-
-        <!-- LINKEDIN -->
-        <a
-            class="social-icon"
-            href="https://www.linkedin.com/in/nipuni-hansika-0a193b21b"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="LinkedIn — opens in a new tab"
-            title="LinkedIn"
-        >
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path
-                fill="currentColor"
-                d="M5.5 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM4 9h3v12H4V9Zm5 0h3v1.6c.7-1.1 1.8-1.9 3.7-1.9 3.3 0 4.3 2.1 4.3 5.2V21h-3v-6.3c0-1.7-.3-3-2.2-3-2 0-2.8 1.4-2.8 3.5V21H9V9Z"
-            />
-            </svg>
-        </a>
-
-        <!-- GOOGLE SCHOLAR -->
-        <a
-            class="social-icon"
-            href="https://scholar.google.com/citations?hl=en&amp;user=lKL3WSQAAAAJ"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Google Scholar — opens in a new tab"
-            title="Google Scholar"
-        >
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path
-                fill="currentColor"
-                d="M12 3 1 9l11 6 9-4.9V17h2V9L12 3Zm-7 10v4c0 2.2 3.1 4 7 4s7-1.8 7-4v-4l-7 3.8L5 13Z"
-            />
-            </svg>
-        </a>
-
-        </div>
-
-        <p>© 2026 Nipuni Hansika. All rights reserved.</p>
-    </div>
- </footer>
- </body>
+  <script src="js/core/setup.js"></script>
+  <script src="data/site.js"></script>
+  <script src="data/projects/motus.js"></script>
+  <script src="js/core/icons.js"></script>
+  <script src="js/core/helpers.js"></script>
+  <script src="js/core/layout.js"></script>
+  <script src="js/pages/project.js"></script>
+</body>
 </html>
-

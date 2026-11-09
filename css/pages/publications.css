@@ -1,0 +1,38 @@
+/* ==========================================================================
+   PUBLICATIONS  (you do not need to edit this file)
+   The list of papers. The .row layout is also used by the Experience and Education pages.
+   ========================================================================== */
+
+.row {
+  display: grid;
+  grid-template-columns: 155px 1fr;
+  gap: 20px;
+  border-top: 1px solid var(--rule);
+  padding: 18px 0;
+}
+
+.row .label {
+  color: var(--rose);
+}
+
+.row h3 {
+  font-size: 1.45rem;
+}
+
+.row p:not(.label) {
+  color: var(--muted);
+  margin-top: 5px;
+}
+
+@media (max-width: 650px) {
+  .row {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+}
+
+#publications .heading h1 {
+  margin-top: 10px;
+  font-size: clamp(2.7rem, 6vw, 4.8rem);
+  letter-spacing: -.055em;
+}

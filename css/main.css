@@ -1,0 +1,31 @@
+/* ==========================================================================
+   MAIN STYLESHEET  (you do not need to edit this file)
+
+   Every page loads this one file, which brings in the others below. The
+   order matters: later files can build on earlier ones.
+
+   To change colours or fonts, edit theme.css.
+   ========================================================================== */
+
+/* Colours and fonts */
+@import url("theme.css");
+
+/* Site-wide foundations */
+@import url("base.css");
+@import url("layout.css");
+@import url("components.css");
+
+/* One file per page */
+@import url("pages/home.css");
+@import url("pages/research.css");
+@import url("pages/publications.css");
+@import url("pages/career.css");
+@import url("pages/teaching.css");
+@import url("pages/contact.css");
+
+/* Research project pages */
+@import url("pages/projects/shared.css");
+@import url("pages/projects/motus.css");
+@import url("pages/projects/accessible-ar.css");
+@import url("pages/projects/gesture-robot.css");
+@import url("pages/projects/touch-speech.css");

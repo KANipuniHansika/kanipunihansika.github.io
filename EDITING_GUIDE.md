@@ -1,98 +1,123 @@
-# Editing Nipuni Hansika’s portfolio
+# How to update your website
 
-This website uses plain HTML and CSS. There is no build step and no account or API key is required to edit the downloaded copy.
+Everything you say on this website lives in the **`data`** folder. You change the words there, and the design takes care of itself. You never need to touch the styling to add a paper, a job or a photo.
 
-## Open your copy
+## Seeing your changes
 
-1. Download and extract Nipuni_Hansika_Portfolio_Source.zip.
-2. Open the extracted folder in a code editor such as Visual Studio Code.
-3. Open index.html in your browser. Click the navigation to move between pages.
-4. Save changes in your editor, then refresh the browser to see them.
+1. Open this folder in **Visual Studio Code**. Turn on **View > Word Wrap** so long lines are easy to read.
+2. Double-click **`index.html`** to open your website in a browser.
+3. Edit a file and save it (**Ctrl + S**).
+4. Refresh the browser (**F5**) to see the change.
 
-## Files
+Nothing goes live until you publish it (see [Publishing](#publishing-your-changes)), so you can experiment safely.
 
-| File | What to edit |
+## Where everything is
+
+| To change... | Edit this file |
 | --- | --- |
-| index.html | Homepage introduction and illustration |
-| research.html | Project descriptions and contributions |
-| publications.html | Papers, authors and DOI links |
-| experience.html | Employment and teaching |
-| education.html | Degrees and qualifications |
-| contact.html | Contact page |
-| styles.css | Colours, type, spacing and responsive layout |
+| Email, social links, menu, footer | `data/site.js` |
+| Homepage introduction and highlights | `data/home.js` |
+| Project boxes on the Research page | `data/research.js` |
+| A full research project page | a file in `data/projects/` |
+| Papers | `data/publications.js` |
+| Jobs | `data/experience.js` |
+| Teaching roles | `data/teaching.js` |
+| Degrees | `data/education.js` |
+| Contact page | `data/contact.js` |
+| **Colours and fonts** | `css/theme.css` |
 
-## Colours
+Pictures go in `images`, papers in `papers`, and your résumé in `files`.
 
-Open styles.css. The settings at the top apply to every page.
+**Please leave these alone:** the `js` folder, every file in `css` other than `theme.css`, and the `.html` files. They hold the design and layout.
 
-```css
-:root {
-  --paper: #f7f5ef; /* background */
-  --ink: #1b2924; /* main text */
-  --muted: #4f6158; /* secondary text */
-  --green: #194b39; /* main accent and buttons */
-  --accent: #d8ed9f; /* light accent */
-  --dark: #183c31; /* footer and illustration */
-  --feature: #e7ecde; /* MOTUS background */
-}
+## Three rules for editing data files
+
+**1. Keep the quotation marks around text.**
+
+```js
+title: "Research Engineer",
 ```
 
-Change the six-digit colour values. Your editor may provide a colour picker. Keep text easy to read against its background. Search further down the file for the section you want to change. A few decorative borders have separate colours.
+**2. Keep the comma at the end of each line or block.** A missing comma is the most common mistake.
 
-## Text, links and images
+**3. To add something, copy a whole block.** A block starts with `{` and ends with `},`. Copy all of it, paste it, and change the words.
 
-Edit the text between HTML tags. Keep the opening and closing tags.
+If you need a double quotation mark inside your text, use the curly kind: “like this”.
 
-```html
-<p>Write your new description here.</p>
-<a href="https://doi.org/YOUR-DOI">Read the paper</a>
+Lines beginning with `//` are notes to you. They never appear on the website.
+
+## Making text bold, italic or a link
+
+| You type | It shows |
+| --- | --- |
+| `**these words**` | **these words** in bold |
+| `_these words_` | *these words* in italics |
+| `[Read more](https://example.com)` | a link called "Read more" |
+
+## Common updates
+
+### Add a paper
+
+1. Put the PDF in the `papers` folder.
+2. Open `data/publications.js`, copy a whole paper block, and paste it at the top of the `papers` list.
+3. Change the details. Point the "Read PDF" link at your file, such as `papers/my-new-paper-2027.pdf`.
+
+### Add a homepage highlight
+
+Open `data/home.js`, find `items`, copy a block to the top of the list, and change it.
+
+```js
+{
+  date: "March 2027",
+  yearMonth: "2027-03",
+  text: "Gave a talk at the [HCI Symposium](https://example.com).",
+},
 ```
 
-To add a project, copy an entire existing <article class="card"> ... </article> in research.html. Change its title, description and contribution.
+### Add a job, teaching role or degree
 
-Create an images folder beside index.html. Place your image there, then insert this inside a project article.
+Open `data/experience.js`, `data/teaching.js` or `data/education.js`, copy a whole block to the top of the list, and change it. Put any new logo in the `images` folder.
 
-```html
-<img src="images/motus.jpg" alt="MOTUS drawing interface showing stroke feedback" style="max-width:100%;height:auto;">
-```
+### Change your photo
 
-Use the actual filename and a description of what the image shows. Use your own images or images you have permission to share.
+Put the new photo in the `images` folder. In `data/home.js`, change the `photo` line to its filename.
 
-## Navigation and repeated content
+### Replace your résumé
 
-The navigation and footer appear in each HTML file. If you add a page or change the footer email, make the same edit in all six pages. The CSS file is shared, so style edits only need to happen once.
+Save the new PDF over `files/Nipuni_Hansika_Resume.pdf`, keeping exactly the same name.
 
-## Publish edits to the existing ChatGPT Site
+### Change colours or fonts
 
-Saving local files changes your local copy. To update the hosted portfolio, upload your edited files or ZIP into the same ChatGPT conversation and ask to apply and deploy them to the existing Nipuni Hansika portfolio. The Site source can then be updated and published at the existing URL. Keep your last working ZIP as a backup.
+Open `css/theme.css`. Every colour is labelled with where it is used. Click the small coloured square beside a code to open a colour picker.
 
-You can also request text and design changes directly in this conversation.
+### Add a new research project
 
-## Optional independent hosting with GitHub Pages
+This takes four steps.
 
-For a website you maintain through your own GitHub account, create a public repository named YOURUSERNAME.github.io. Upload the contents of this folder so index.html and styles.css are at the repository root. Under Settings > Pages, select Deploy from a branch, main, and /(root), then Save. GitHub provides the live URL in Pages settings.
+1. **Write the content.** In `data/projects`, copy `_TEMPLATE.js` and rename the copy, for example `my-project.js`. Fill it in, following the notes inside. Put its pictures in a new folder such as `images/research/my-project`.
+2. **Make its page.** Copy `research-motus.html` and rename the copy `research-my-project.html`. Open it and change two lines:
+   - the `<title>` near the top
+   - `data/projects/motus.js` near the bottom, to `data/projects/my-project.js`
+3. **Add its box.** In `data/research.js`, copy a block in the `projects` list and fill it in. Set `page` to `research-my-project.html`, and make its `id` match the `id` in your project file.
+4. **Check it.** Open the Research page and click through to your project.
 
-You can then edit files in GitHub or push changes from your computer. For a custom domain, follow the current instructions in GitHub Pages settings and your domain provider.
+## If something looks wrong
 
-Official instructions
-https://docs.github.com/en/pages/quickstart
-https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site
+A **yellow message** at the top of the page means a data file has a typo. It tells you which file to check. Look for a missing comma or quotation mark near the last thing you changed.
 
-## Check after editing
+If you cannot find it, press **Ctrl + Z** in your editor to undo your recent changes.
 
-Open every page. Test the navigation and project expanders. Check the layout on a phone and a computer. Confirm the email address and DOI links. Local previews do not reproduce the hosted Site’s sign-in and sharing controls.
+## Publishing your changes
 
+Your website is hosted by GitHub Pages at https://github.com/KANipuniHansika/kanipunihansika.github.io.
 
-## New Teaching page and profile photo
+**The simple way, for small edits in your browser:**
 
-teaching.html contains your teaching roles. Its navigation link appears on all seven pages.
+1. Open the link above and sign in.
+2. Click through to the file, for example `data` then `publications.js`.
+3. Click the **pencil icon**, make your change, and click **Commit changes**.
+4. Your website updates within a minute or two.
 
-To add your real photo, save a portrait as images/profile.jpg. In index.html replace the placeholder image tag with this tag.
+**From Visual Studio Code:** open the **Source Control** panel on the left, type a short note about your change, click **Commit**, then **Sync Changes**.
 
-```html
-<img src="images/profile.jpg" alt="Portrait of Nipuni Hansika" width="600" height="720">
-```
-
-The image is cropped to a 5:6 frame. In styles.css adjust .profile-photo img object-position (for example center 20%) to move the crop. The width and height attributes describe the display ratio and do not require a 600 by 720 source file. Use a clear portrait with your face near the centre. The ZIP includes an NH initials placeholder, pending your real photo.
-
-The previous homepage stroke illustration has been replaced by the photo area. The Experience page still provides your employment summary. Teaching expands the teaching roles with responsibilities.
+Before publishing, open the pages you changed and check them on both a computer and a phone-sized window.
