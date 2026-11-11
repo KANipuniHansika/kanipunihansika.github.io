@@ -50,6 +50,16 @@ export default function Home() {
             A little curiosity goes a long way.
             <span aria-hidden="true">✧</span>
           </p>
+          <div className="hansi-contact-row">
+            <SocialLinks ariaLabel="Social profiles" includeEmail={false} />
+            <a className="button hansi-email" href={`mailto:${site.email}`}>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+                <rect x="3" y="5" width="18" height="14" rx="2" />
+                <path d="m3 6 9 7 9-7" />
+              </svg>
+              Say hello
+            </a>
+          </div>
         </div>
 
         {/* Right column: all text and interactive elements flow together */}
@@ -104,20 +114,7 @@ export default function Home() {
             >
               Résumé ↗
             </a>
-          </div>
-
-          {/* Social links and email button flow with the text,
-              not under the portrait. */}
-          <div className="hansi-contact-row">
-            <SocialLinks ariaLabel="Social profiles" includeEmail={false} />
-            <a className="button hansi-email" href={`mailto:${site.email}`}>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
-                <rect x="3" y="5" width="18" height="14" rx="2" />
-                <path d="m3 6 9 7 9-7" />
-              </svg>
-              Say hello
-            </a>
-          </div>
+          </div>      
         </div>
       </section>
 

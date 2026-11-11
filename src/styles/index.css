@@ -37,6 +37,9 @@
   --plum: #63386f;       /* secondary accent */
   --surface: #ffffff;    /* card / surface background */
   --serif: Georgia, 'Times New Roman', serif;
+  --night: #2c1a2e;      /* header / footer dark end */
+  --night-ink: #fbe9f1;  /* light text on the dark bands */
+  --night-star: #f0a9c8; /* spark on the dark bands */
 }
 
 /* ============================================================
@@ -85,7 +88,9 @@ h3 { font-size: clamp(1.55rem, 2.8vw, 2.35rem); letter-spacing: -.035em; }
   z-index: 2;
   padding: 8px;
 }
-main { min-height: 65vh; }
+/* Keep the footer at the bottom of the window on short pages */
+#root { min-height: 100vh; display: flex; flex-direction: column; }
+main { flex: 1 0 auto; min-height: 65vh; }
 .section { padding: 62px 0; border-top: 1px solid var(--rule); }
 .page { padding-top: 50px; border-top: 0; }
 .page > h1 {
@@ -104,56 +109,56 @@ main { min-height: 65vh; }
    3. HEADER, BRAND, NAVIGATION
    ============================================================ */
 .top {
-  background: var(--surface);
-  border-bottom: 1px solid var(--rule);
+  /* Dark plum behind the logo, lightening to rose on the right */
+  background: linear-gradient(100deg, var(--night) 0%, #4a2145 45%, var(--rose) 100%);
+  color: var(--night-ink);
 }
 .bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  padding: 18px 0;
+  padding: 16px 0;
   flex-wrap: wrap;
 }
 
-/* Hansi wordmark */
+/* Hansi logo: light-pink blob with "h" + wordmark with spark over the i */
 .hansi-brand {
-  position: relative;
   display: inline-flex;
   align-items: center;
-  gap: 7px;
-  padding: 4px 0 8px;
-  color: var(--rose);
-  font-family: Georgia, serif;
+  gap: 12px;
+  color: var(--night-ink);
+  font-family: Georgia, 'Times New Roman', serif;
   font-size: 2rem;
   font-style: italic;
   font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: -.05em;
+  line-height: 1;
+  letter-spacing: -.045em;
   text-decoration: none;
 }
-.hansi-wordmark {
-  display: inline-block;
-  color: var(--rose);
-  font: inherit;
+.hansi-brand:hover { color: #ffffff; }
+.brand-blob {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 44px;
+  height: 48px;
+  border-radius: 44% 56% 40% 60% / 34% 38% 62% 66%;
+  background: linear-gradient(145deg, #fde8f1, #f3c6da);
+  color: #7a2f55;
+  letter-spacing: 0;
 }
-.hansi-brand .brand-spark {
-  align-self: flex-start;
-  margin-top: 3px;
-  color: var(--plum);
-  font-size: .95rem;
-}
-.hansi-brand::after {
-  content: "";
+.brand-blob span { font-size: 1.85rem; transform: translateX(-1px); }
+.hansi-wordmark { display: inline-block; padding: 4px 0; }
+.brand-i { position: relative; display: inline-block; }
+.brand-i svg {
   position: absolute;
-  left: 1px;
-  bottom: 3px;
-  width: 58px;
-  height: 5px;
-  border-bottom: 2px solid var(--rose);
-  border-radius: 50%;
-  opacity: .35;
-  transform: rotate(-5deg);
+  left: 50%;
+  top: -.02em;
+  width: .32em;
+  height: .32em;
+  transform: translateX(calc(-50% + .07em)) rotate(10deg);
+  fill: var(--night-star);
 }
 
 /* Navigation with outline icons */
@@ -169,7 +174,7 @@ main { min-height: 65vh; }
   gap: 6px;
   padding: 8px 10px;
   border-radius: 999px;
-  color: var(--muted);
+  color: #f3dce8;
   font-size: .82rem;
   font-weight: 600;
   transition: background-color 160ms ease, color 160ms ease;
@@ -186,10 +191,11 @@ main { min-height: 65vh; }
 }
 .main-nav a:hover,
 .main-nav a[aria-current="page"] {
-  background: var(--feature);
-  color: var(--rose);
+  background: rgba(255, 255, 255, .16);
+  color: #ffffff;
   text-decoration: none;
 }
+.top a:focus-visible { outline-color: var(--night-ink); }
 @media (max-width: 650px) {
   .main-nav { gap: 4px; }
   .main-nav a { padding: 7px 9px; font-size: .8rem; }
@@ -332,7 +338,7 @@ main { min-height: 65vh; }
   isolation: isolate;
   display: grid;
   place-items: center;
-  width: min(100%, 240px);
+  width: 100%;
   aspect-ratio: 5 / 6;
   margin: 0 auto 8px;
   border: 5px solid white;
@@ -377,7 +383,7 @@ main { min-height: 65vh; }
 }
 
 /* About section */
-.hansi-about { padding-top: 8px; }
+.hansi-about { padding-top: 0; }
 .hansi-about h1 {
   margin: 14px 0 14px;
   font-size: clamp(2.7rem, 4.4vw, 4rem);
@@ -408,21 +414,21 @@ main { min-height: 65vh; }
 .bio-links {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 12px 24px;
   margin-top: 24px;
   font-weight: 650;
 }
 
-/* Social links + email button row — flows with the bio text */
+/* Social links + email button — centred under the portrait */
 .hansi-contact-row {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  flex-wrap: wrap;
   gap: 16px;
-  margin-top: 22px;
 }
 .hansi-contact-row .social-links {
-  justify-content: flex-start;
+  justify-content: center;
   margin: 0;
 }
 .hansi-contact-row .hansi-email {
@@ -482,14 +488,20 @@ main { min-height: 65vh; }
 
 /* Footer */
 .hansi-footer {
-  padding: 24px 0;
-  border-top: 1px solid var(--rule);
-  background: #f7eef5;
-  color: var(--muted);
+  padding: 26px 0;
+  background: linear-gradient(100deg, var(--night) 0%, #4a2145 45%, var(--rose) 100%);
+  color: #f3dce8;
   text-align: center;
   font-size: .85rem;
 }
-.hansi-footer .social-links { margin: 0 0 20px; }
+.hansi-footer .social-links { margin: 0 0 18px; }
+.hansi-footer .social-icon {
+  border-color: rgba(255, 255, 255, .35);
+  background: transparent;
+  color: var(--night-ink);
+}
+.hansi-footer .social-icon:hover { background: var(--night-ink); color: var(--plum); }
+.hansi-footer a:focus-visible { outline-color: var(--night-ink); }
 
 /* ============================================================
    6. RESEARCH PAGES
@@ -554,7 +566,10 @@ main { min-height: 65vh; }
   line-height: 1.2;
   margin: 8px 0 11px;
 }
-.research-overview .card .label { color: var(--rose); }
+.research-overview .card .label {
+  color: var(--rose);
+  min-height: calc(2 * 1.65em); /* reserve two lines so titles align */
+}
 .research-overview .card p:not(.label) { color: var(--muted); }
 .research-overview .card .explore-project { margin-top: auto; padding-top: 20px; }
 
@@ -593,14 +608,14 @@ main { min-height: 65vh; }
 }
 .research-project .label { color: var(--rose); }
 .project-subtitle {
-  max-width: 65ch;
+  max-width: none;
   font-family: var(--serif);
   font-size: 1.2rem;
   line-height: 1.55;
 }
 .project-affiliation { color: var(--muted); font-size: .9rem; margin-top: 12px; }
 .project-overview {
-  max-width: 75ch;
+  max-width: none;
   color: var(--muted);
   margin: 24px 0;
   line-height: 1.85;
@@ -614,7 +629,7 @@ main { min-height: 65vh; }
   padding-left: 20px;
   color: var(--muted);
   margin: 0 0 20px;
-  max-width: 75ch;
+  max-width: none;
 }
 .research-project li { margin: 9px 0; }
 
@@ -640,7 +655,7 @@ main { min-height: 65vh; }
   margin: 12px 0 20px;
 }
 .detail-section > p:not(.label) {
-  max-width: 80ch;
+  max-width: none;
   color: var(--muted);
   line-height: 1.85;
   margin-bottom: 14px;
@@ -743,9 +758,12 @@ main { min-height: 65vh; }
 
 /* Figure + gallery */
 .detail-figure {
-  margin: 22px auto;      /* center standalone figures */
+  margin: 28px 0;
   min-width: 0;
-  max-width: 600px;       /* constrain standalone figures */
+}
+.detail-figure .figure-trigger img {
+  max-height: 680px;
+  object-fit: contain;
 }
 .gallery .detail-figure,
 .published-split .detail-figure,
@@ -785,6 +803,7 @@ main { min-height: 65vh; }
   align-items: start;
 }
 .gallery-three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.research-project > header + .gallery { margin-top: 28px; }
 .gallery .detail-figure { margin: 10px 0; }
 
 /* Disclosure (collapsible section) */
@@ -927,26 +946,6 @@ main { min-height: 65vh; }
 .credits-section { padding: 32px 0; border-top: 1px solid var(--rule); }
 .credits-section p { color: var(--muted); line-height: 1.8; margin-bottom: 10px; }
 
-/* Center and constrain visual elements within research sections
-   for consistent, professional alignment of text and images. */
-.research-project .detail-section .section-heading,
-.research-project .detail-section > p:not(.label),
-.research-project .gallery,
-.research-project .gallery-three,
-.research-project .meta-grid,
-.research-project .facts-grid,
-.research-project .flow-grid,
-.research-project .reading-grid,
-.research-project .stats-grid,
-.research-project .steps-grid,
-.research-project .published-split,
-.research-project .implementation-grid,
-.research-project .table-scroll,
-.research-project .result-stat,
-.research-project .role-box {
-  max-width: 800px;
-  margin-inline: auto;
-}
 
 /* ============================================================
    7. PUBLICATIONS
@@ -1064,11 +1063,13 @@ main { min-height: 65vh; }
    10. CONTACT
    ============================================================ */
 .contact-intro {
-  max-width: 800px;
-  margin: auto;
-  padding: 76px 0 64px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+  align-items: start;
+  gap: 56px;
+  padding: 72px 0 64px;
 }
-.contact-intro > .label { color: var(--rose); }
+.contact-info > .label { color: var(--rose); }
 .contact-intro h1 {
   margin: 18px 0 24px;
   font-size: clamp(2.6rem, 6vw, 4.5rem);
@@ -1086,12 +1087,12 @@ main { min-height: 65vh; }
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin: 24px 0 30px;
+  margin: 24px 0 22px;
 }
 .contact-hello { border-radius: 999px; padding: 12px 24px; }
-.contact-email { margin-top: 14px; font-size: .95rem; overflow-wrap: anywhere; }
+.contact-email { font-size: .95rem; font-weight: 650; overflow-wrap: anywhere; }
+.contact-affiliation { margin-top: 32px; }
 .contact-affiliation {
-  margin-top: 44px;
   padding: 26px;
   border: 1px solid var(--rule);
   border-radius: 16px;
@@ -1110,6 +1111,67 @@ main { min-height: 65vh; }
   font-style: italic;
 }
 .contact-signoff span { margin-left: 5px; color: var(--rose); }
+
+/* Contact form */
+.contact-form {
+  padding: clamp(22px, 3.5vw, 36px);
+  border: 1px solid var(--rule);
+  border-radius: 16px;
+  background: var(--surface);
+  box-shadow: 0 10px 30px rgba(139, 54, 91, 0.06);
+}
+.contact-form h2 { font-size: 1.9rem; letter-spacing: -.035em; }
+.contact-form-note { margin: 8px 0 24px; color: var(--muted); font-size: .9rem; }
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 16px;
+}
+.form-field { display: flex; flex-direction: column; margin-bottom: 18px; }
+.form-field label {
+  margin-bottom: 6px;
+  color: var(--ink);
+  font-size: .85rem;
+  font-weight: 650;
+}
+.form-optional { color: var(--muted); font-weight: 400; }
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  background: var(--paper);
+  color: var(--ink);
+  font: inherit;
+  font-size: .95rem;
+  transition: border-color 150ms ease, box-shadow 150ms ease, background-color 150ms ease;
+}
+.form-field textarea { min-height: 150px; resize: vertical; }
+.form-field input:hover,
+.form-field textarea:hover { border-color: #d9c2d3; }
+.form-field input:focus,
+.form-field textarea:focus {
+  outline: none;
+  border-color: var(--rose);
+  background: var(--surface);
+  box-shadow: 0 0 0 3px var(--accent);
+}
+.form-field.has-error input,
+.form-field.has-error textarea { border-color: #b3261e; }
+.form-error { margin-top: 6px; color: #b3261e; font-size: .8rem; }
+.form-hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 18px;
+  margin-top: 6px;
+}
+.contact-submit { border-radius: 999px; padding: 12px 26px; font: inherit; font-weight: 650; cursor: pointer; }
+.contact-submit:disabled { opacity: .7; cursor: progress; }
+.form-status { color: var(--muted); font-size: .88rem; }
+.form-status:empty { display: none; }
 
 /* ============================================================
    EXTRA — LIGHTBOX, CARD HOVER, TEACHING LOGOS
@@ -1226,6 +1288,9 @@ main { min-height: 65vh; }
   }
   .hansi-portrait { width: min(100%, 220px); }
 }
+@media (max-width: 900px) {
+  .contact-intro { grid-template-columns: minmax(0, 1fr); gap: 40px; }
+}
 @media (max-width: 760px) {
   .hansi-intro {
     grid-template-columns: 1fr;
@@ -1260,6 +1325,7 @@ main { min-height: 65vh; }
   .teaching-entry { grid-template-columns: 1fr; gap: 10px; }
   .teaching-left { flex-direction: row; align-items: center; gap: 14px; }
   .contact-intro { padding: 44px 0; }
+  .form-row { grid-template-columns: 1fr; }
   .contact-affiliation { padding: 20px; }
   .highlight { grid-template-columns: 1fr; gap: 6px; }
   .research-overview .grid { grid-template-columns: 1fr; }
@@ -1277,6 +1343,7 @@ main { min-height: 65vh; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .social-icon { transition: none; }
+  .form-field input, .form-field textarea { transition: none; }
   .main-nav a { transition: none; }
   .graduation-photos img { transition: none; }
   .graduation-photos .figure-trigger:hover img { transform: none; }

@@ -18,6 +18,14 @@ export const site = {
   // Primary email (used for the "Say hello" button and footer).
   email: 'nipuni.h@eie.ruh.ac.lk',
 
+  // Contact form (sent through web3forms.com).
+  form: {
+    // The key from web3forms.com, inside the quotation marks. It decides which
+    // inbox receives the messages. To use a different inbox, get a new key:
+    // changing the email above does NOT change where messages go.
+    accessKey: '595721c4-8106-4c98-aab7-05b5e897d652',
+  },
+
   // Short tagline shown under the name on the homepage.
   tagline: 'Researcher · Lecturer · Curious human',
 
