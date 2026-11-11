@@ -122,44 +122,36 @@ main { flex: 1 0 auto; min-height: 65vh; }
   flex-wrap: wrap;
 }
 
-/* Hansi logo: light-pink blob with "h" + wordmark with spark over the i */
+/* Hansi logo (src/components/Logo.jsx): blush script "h" + gradient name,
+   pink spark and tapered underline. Change the colours here. */
 .hansi-brand {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
-  color: var(--night-ink);
+  text-decoration: none;
+  --logo-h: #fbe9f1;            /* script "h" */
+  --logo-accent: #f0a9c8;       /* dot, spark, underline */
+  --logo-name-top: #ffffff;     /* name gradient: top */
+  --logo-name-bottom: #f3c6da;  /* name gradient: bottom */
+}
+.hansi-logo { display: block; height: 58px; width: auto; overflow: visible; }
+.hansi-logo .logo-h {
+  fill: none;
+  stroke: var(--logo-h);
+  stroke-width: 6.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.hansi-logo .logo-accent { fill: var(--logo-accent); }
+.hansi-logo .logo-underline { fill: var(--logo-accent); opacity: .85; }
+.hansi-logo .logo-name {
   font-family: Georgia, 'Times New Roman', serif;
-  font-size: 2rem;
+  font-size: 46px;
   font-style: italic;
   font-weight: 700;
-  line-height: 1;
-  letter-spacing: -.045em;
-  text-decoration: none;
+  letter-spacing: -.5px;
 }
-.hansi-brand:hover { color: #ffffff; }
-.brand-blob {
-  display: grid;
-  place-items: center;
-  flex: none;
-  width: 44px;
-  height: 48px;
-  border-radius: 44% 56% 40% 60% / 34% 38% 62% 66%;
-  background: linear-gradient(145deg, #fde8f1, #f3c6da);
-  color: #7a2f55;
-  letter-spacing: 0;
-}
-.brand-blob span { font-size: 1.85rem; transform: translateX(-1px); }
-.hansi-wordmark { display: inline-block; padding: 4px 0; }
-.brand-i { position: relative; display: inline-block; }
-.brand-i svg {
-  position: absolute;
-  left: 50%;
-  top: -.02em;
-  width: .32em;
-  height: .32em;
-  transform: translateX(calc(-50% + .07em)) rotate(10deg);
-  fill: var(--night-star);
-}
+.hansi-brand:hover { --logo-accent: #ffc4dc; }
+@media (max-width: 650px) { .hansi-logo { height: 48px; } }
 
 /* Navigation with outline icons */
 .main-nav {
